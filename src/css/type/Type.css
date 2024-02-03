@@ -1,0 +1,51 @@
+
+body {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+div.typedisplay.lines,
+section.typedisplay.lines {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: #cfcfcf;
+    padding: 8pt 10pt;
+}
+
+div.typedisplay.line {
+    position: relative;
+}
+
+div.typedisplay.line > p.typedisplay.hint,
+div.typedisplay.line > p.typedisplay.input {
+    margin: 0;
+}
+
+div.typedisplay.line > p.typedisplay.hint {
+    color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+div.typedisplay.line > p.typedisplay.input {
+    z-index: 2;
+    margin-bottom: 2px;
+}
+
+p.typedisplay.hint,
+p.typedisplay.in:not(.done) {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+}
+
+p.typedisplay-hint.fail,
+*.typedisplay.hidden {
+    visibility: hidden;
+}
+
+p.typedisplay-in.fail,
+*.typedisplay.red {
+    color: red;
+}
